@@ -1,0 +1,327 @@
+prompt --application/pages/page_00006
+begin
+--   Manifest
+--     PAGE: 00006
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2023.04.28'
+,p_release=>'23.1.0'
+,p_default_workspace_id=>1403883904874300
+,p_default_application_id=>105
+,p_default_id_offset=>4464959646306689
+,p_default_owner=>'HR'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>6
+,p_name=>'Clientes'
+,p_alias=>'CLIENTES-APEX'
+,p_step_title=>unistr('Relat\00F3rio de Clientes')
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_page_is_public_y_n=>'Y'
+,p_protection_level=>'C'
+,p_page_component_map=>'18'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240703170831'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(8200870141215007)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(7989220863021671)
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_imp.id(7891177059021593)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>wwv_flow_imp.id(8069331845021726)
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(8201517119215009)
+,p_plug_name=>'Clientes'
+,p_region_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(7967006383021654)
+,p_plug_display_sequence=>10
+,p_query_type=>'TABLE'
+,p_query_table=>'CLIENTE'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'MILLIMETERS'
+,p_prn_paper_size=>'A4'
+,p_prn_width=>297
+,p_prn_height=>210
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header=>'Clientes'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'bold'
+,p_prn_page_header_font_size=>'24'
+,p_prn_page_footer=>'&P6_RODAPE.'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#c7c7cc'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#ffffff'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#000000'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(4143755401585339)
+,p_max_row_count=>'1000000'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'C'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_detail_link=>'f?p=&APP_ID.:11:&SESSION.::&DEBUG.:RP,:P11_CLI_ID:#CLI_ID#'
+,p_detail_link_text=>'<img src="#IMAGE_PREFIX#app_ui/img/icons/apex-edit-pencil-alt.png" class="apex-edit-pencil-alt" alt="">'
+,p_owner=>'ADMIN'
+,p_internal_uid=>4143755401585339
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4143811936585340)
+,p_db_column_name=>'CLI_ID'
+,p_display_order=>10
+,p_is_primary_key=>'Y'
+,p_column_identifier=>'A'
+,p_column_label=>'ID'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4143960941585341)
+,p_db_column_name=>'NOME'
+,p_display_order=>20
+,p_column_identifier=>'B'
+,p_column_label=>'Nome'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4144008713585342)
+,p_db_column_name=>'SOBRENOME'
+,p_display_order=>30
+,p_column_identifier=>'C'
+,p_column_label=>'Sobrenome'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4144184449585343)
+,p_db_column_name=>'APELIDO'
+,p_display_order=>40
+,p_column_identifier=>'D'
+,p_column_label=>'Apelido'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4523352338305928)
+,p_db_column_name=>'TP_SANGUINEO'
+,p_display_order=>50
+,p_column_identifier=>'J'
+,p_column_label=>unistr('Sangu\00EDneo')
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4523590163305930)
+,p_db_column_name=>'ATIVIDADES'
+,p_display_order=>60
+,p_column_identifier=>'L'
+,p_column_label=>'Atividades'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4523277424305927)
+,p_db_column_name=>'TP_DOCUMENTO'
+,p_display_order=>70
+,p_column_identifier=>'I'
+,p_column_label=>'Tipo'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4144259348585344)
+,p_db_column_name=>'DOCUMENTO'
+,p_display_order=>80
+,p_column_identifier=>'E'
+,p_column_label=>'Documento'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4144372014585345)
+,p_db_column_name=>'ENDERECO'
+,p_display_order=>90
+,p_column_identifier=>'F'
+,p_column_label=>unistr('Endere\00E7o')
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4523158823305926)
+,p_db_column_name=>'DT_NASCIMENTO'
+,p_display_order=>100
+,p_column_identifier=>'H'
+,p_column_label=>'Nascimento'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4144430258585346)
+,p_db_column_name=>'DATA_CRIACAO'
+,p_display_order=>110
+,p_column_identifier=>'G'
+,p_column_label=>unistr('Cria\00E7\00E3o')
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4523422565305929)
+,p_db_column_name=>'TIME_FAVORITO'
+,p_display_order=>130
+,p_column_identifier=>'K'
+,p_column_label=>'Time'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4523678168305931)
+,p_db_column_name=>'DESENHO_FAVORITO'
+,p_display_order=>140
+,p_column_identifier=>'M'
+,p_column_label=>'Desenho Favorito'
+,p_column_type=>'OTHER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4523781621305932)
+,p_db_column_name=>'TENHO_PET'
+,p_display_order=>150
+,p_column_identifier=>'N'
+,p_column_label=>'Tenho Pet'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4523803973305933)
+,p_db_column_name=>'PET_LOVER'
+,p_display_order=>160
+,p_column_identifier=>'O'
+,p_column_label=>'Pet Lover'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4523999932305934)
+,p_db_column_name=>'TIPO_FILME'
+,p_display_order=>170
+,p_column_identifier=>'P'
+,p_column_label=>'Tipo Filme'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(4524078936305935)
+,p_db_column_name=>'COR_FAVORITA'
+,p_display_order=>180
+,p_column_identifier=>'Q'
+,p_column_label=>'Cor Favorita'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(4507253659177962)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'45073'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'CLI_ID:NOME:SOBRENOME:APELIDO:TP_SANGUINEO:ATIVIDADES:TIME_FAVORITO:TP_DOCUMENTO:DOCUMENTO:ENDERECO:DT_NASCIMENTO:DATA_CRIACAO:'
+,p_sort_column_1=>'CLI_ID'
+,p_sort_direction_1=>'ASC'
+,p_sort_column_2=>'0'
+,p_sort_direction_2=>'ASC'
+,p_sort_column_3=>'0'
+,p_sort_direction_3=>'ASC'
+,p_sort_column_4=>'0'
+,p_sort_direction_4=>'ASC'
+,p_sort_column_5=>'0'
+,p_sort_direction_5=>'ASC'
+,p_sort_column_6=>'0'
+,p_sort_direction_6=>'ASC'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(8233139560448813)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_imp.id(8201517119215009)
+,p_button_name=>'Novo'
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#:t-Button--iconRight:t-Button--hoverIconPush'
+,p_button_template_id=>wwv_flow_imp.id(8067790427021724)
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Novo'
+,p_button_position=>'RIGHT_OF_IR_SEARCH_BAR'
+,p_button_redirect_url=>'f?p=&APP_ID.:11:&SESSION.::&DEBUG.:CR,11::'
+,p_icon_css_classes=>'fa-server-new'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(8605297750891994)
+,p_name=>'P6_RODAPE'
+,p_item_sequence=>80
+,p_item_plug_id=>wwv_flow_imp.id(8201517119215009)
+,p_use_cache_before_default=>'NO'
+,p_source=>'P6_RODAPE'
+,p_source_type=>'ITEM'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(8605406653891995)
+,p_process_sequence=>10
+,p_process_point=>'BEFORE_HEADER'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'P5_RODAPE'
+,p_process_sql_clob=>':P6_RODAPE := v(''APP_USER'') || ''   -   '' || to_char(CURRENT_DATE, ''dd/mm/yyyy hh24:mi:ss'');'
+,p_process_clob_language=>'PLSQL'
+,p_internal_uid=>4140447007585306
+);
+wwv_flow_imp.component_end;
+end;
+/

@@ -1,0 +1,240 @@
+prompt --application/pages/page_00013
+begin
+--   Manifest
+--     PAGE: 00013
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2023.04.28'
+,p_release=>'23.1.0'
+,p_default_workspace_id=>1403883904874300
+,p_default_application_id=>105
+,p_default_id_offset=>4464959646306689
+,p_default_owner=>'HR'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>13
+,p_name=>unistr('Relat\00F3rio Interativo')
+,p_alias=>'RELATORIO-INTERATIVO'
+,p_step_title=>unistr('Relat\00F3rio Interativo')
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'18'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240701125812'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(8466550138615618)
+,p_plug_name=>'Breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(7989220863021671)
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_menu_id=>wwv_flow_imp.id(7891177059021593)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>wwv_flow_imp.id(8069331845021726)
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(8467157179615621)
+,p_plug_name=>unistr('Relat\00F3rio Interativo')
+,p_region_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(7967006383021654)
+,p_plug_display_sequence=>10
+,p_query_type=>'TABLE'
+,p_query_table=>'CLIENTE'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_page_header=>unistr('Relat\00F3rio Interativo')
+,p_plug_comment=>'Rel Cli'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(8467197899615621)
+,p_name=>unistr('Relat\00F3rio Interativo')
+,p_max_row_count_message=>unistr('A contagem m\00E1xima de linhas deste relat\00F3rio \00E9 #MAX_ROW_COUNT# linhas. Aplique um filtro para reduzir o n\00FAmero de registros em sua consulta.')
+,p_no_data_found_message=>unistr('Dados n\00E3o encontrados.')
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_owner=>'ADMIN'
+,p_internal_uid=>4002238253308932
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(8467597960615635)
+,p_db_column_name=>'CLI_ID'
+,p_display_order=>0
+,p_is_primary_key=>'Y'
+,p_column_identifier=>'A'
+,p_column_label=>'ID'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(8467983803615637)
+,p_db_column_name=>'NOME'
+,p_display_order=>2
+,p_column_identifier=>'B'
+,p_column_label=>'Nome'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(8468421610615639)
+,p_db_column_name=>'SOBRENOME'
+,p_display_order=>3
+,p_column_identifier=>'C'
+,p_column_label=>'Sobrenome'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(8468788396615639)
+,p_db_column_name=>'APELIDO'
+,p_display_order=>4
+,p_column_identifier=>'D'
+,p_column_label=>'Apelido'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(8469595309615639)
+,p_db_column_name=>'ENDERECO'
+,p_display_order=>6
+,p_column_identifier=>'F'
+,p_column_label=>unistr('Endere\00E7o')
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(8233892682448821)
+,p_db_column_name=>'DOCUMENTO'
+,p_display_order=>16
+,p_column_identifier=>'H'
+,p_column_label=>'Documento'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(8605174777891993)
+,p_db_column_name=>'DATA_CRIACAO'
+,p_display_order=>26
+,p_column_identifier=>'I'
+,p_column_label=>unistr('Data Cria\00E7\00E3o')
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(8470004912622857)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'40051'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_view_mode=>'REPORT'
+,p_report_columns=>'CLI_ID:NOME:SOBRENOME:APELIDO:DOCUMENTO:ENDERECO'
+,p_sort_column_1=>'CLI_ID'
+,p_sort_direction_1=>'ASC'
+,p_count_columns_on_break=>'DOCUMENTO'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(8484319680105912)
+,p_application_user=>'ADMIN'
+,p_name=>'Menor igual a 5'
+,p_description=>'Filtra os registros menores iguais a 5'
+,p_report_seq=>10
+,p_report_columns=>'CLI_ID:NOME:SOBRENOME:APELIDO:DOCUMENTO:ENDERECO'
+,p_sort_column_1=>'CLI_ID'
+,p_sort_direction_1=>'ASC'
+);
+wwv_flow_imp_page.create_worksheet_condition(
+ p_id=>wwv_flow_imp.id(8484804276174276)
+,p_report_id=>wwv_flow_imp.id(8484319680105912)
+,p_condition_type=>'FILTER'
+,p_allow_delete=>'Y'
+,p_column_name=>'CLI_ID'
+,p_operator=>'<='
+,p_expr=>'5'
+,p_condition_sql=>'"CLI_ID" <= to_number(#APXWS_EXPR#)'
+,p_condition_display=>'#APXWS_COL_NAME# <= #APXWS_EXPR_NUMBER#  '
+,p_enabled=>'Y'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(8485073592308293)
+,p_application_user=>'ADMIN'
+,p_name=>'Agrupamento'
+,p_report_seq=>10
+,p_report_type=>'GROUP_BY'
+,p_report_columns=>'CLI_ID:NOME:SOBRENOME:APELIDO:DOCUMENTO:ENDERECO::APXWS_CC_001'
+,p_sort_column_1=>'CLI_ID'
+,p_sort_direction_1=>'ASC'
+);
+wwv_flow_imp_page.create_worksheet_computation(
+ p_id=>wwv_flow_imp.id(8485167441308293)
+,p_report_id=>wwv_flow_imp.id(8485073592308293)
+,p_db_column_name=>'APXWS_CC_001'
+,p_column_identifier=>'C01'
+,p_computation_expr=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'CASE WHEN A = 1 THEN ''Primeiro'' ',
+'          WHEN A = 2 THEN ''Segundo'' ',
+'          WHEN A = 3 THEN ''Terceiro'' ',
+'          ELSE ''Desclacificado'' ',
+'END'))
+,p_column_type=>'STRING'
+,p_column_label=>'Colocado'
+,p_report_label=>'Colocado'
+);
+wwv_flow_imp_page.create_worksheet_group_by(
+ p_id=>wwv_flow_imp.id(8485283109308293)
+,p_report_id=>wwv_flow_imp.id(8485073592308293)
+,p_group_by_columns=>'APXWS_CC_001'
+,p_function_01=>'COUNT'
+,p_function_column_01=>'CLI_ID'
+,p_function_db_column_name_01=>'APXWS_GBFC_01'
+,p_function_format_mask_01=>'999G999G999G999G990'
+,p_function_sum_01=>'N'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(8486332530352474)
+,p_application_user=>'ADMIN'
+,p_name=>unistr('Piv\00F4')
+,p_report_seq=>10
+,p_report_type=>'PIVOT'
+,p_view_mode=>'REPORT'
+,p_report_columns=>'CLI_ID:NOME:SOBRENOME:APELIDO:DOCUMENTO:ENDERECO'
+,p_sort_column_1=>'CLI_ID'
+,p_sort_direction_1=>'ASC'
+);
+wwv_flow_imp_page.create_worksheet_pivot(
+ p_id=>wwv_flow_imp.id(8486426029352476)
+,p_report_id=>wwv_flow_imp.id(8486332530352474)
+,p_pivot_columns=>'ENDERECO'
+,p_row_columns=>'NOME'
+);
+wwv_flow_imp_page.create_worksheet_pivot_agg(
+ p_id=>wwv_flow_imp.id(8486523886352476)
+,p_pivot_id=>wwv_flow_imp.id(8486426029352476)
+,p_display_seq=>1
+,p_function_name=>'COUNT_DISTINCT'
+,p_column_name=>'ENDERECO'
+,p_db_column_name=>'PFC1'
+,p_format_mask=>'999G999G999G999G990'
+,p_display_sum=>'N'
+);
+wwv_flow_imp.component_end;
+end;
+/
