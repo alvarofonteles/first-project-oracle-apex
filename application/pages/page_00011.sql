@@ -824,7 +824,7 @@ wwv_flow_imp_page.create_page_process(
 '               WHERE collection_name = ''TIPO_FILMES''',
 '                 AND NOT EXISTS (SELECT 1 ',
 '                                   FROM cliente_tipo_filme',
-'                                  WHERE cli_id = :P12_CLI_ID',
+'                                  WHERE cli_id = :P11_CLI_ID',
 '                                    AND tipo_filme = c001))',
 '    LOOP',
 '      --',
