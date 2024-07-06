@@ -72,6 +72,12 @@ wwv_flow_imp_shared.create_menu_option(
 ,p_page_id=>27
 );
 wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(5808414542393860)
+,p_short_name=>'API Restfull ORDS'
+,p_link=>'f?p=&APP_ID.:20:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>20
+);
+wwv_flow_imp_shared.create_menu_option(
  p_id=>wwv_flow_imp.id(4571804791754489)
 ,p_parent_id=>wwv_flow_imp.id(8201288693215009)
 ,p_option_sequence=>11

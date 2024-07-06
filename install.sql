@@ -22,7 +22,10 @@ prompt --install
 @@application/shared_components/logic/application_settings.sql
 @@application/shared_components/navigation/tabs/standard.sql
 @@application/shared_components/navigation/tabs/parent.sql
+@@application/shared_components/user_interface/lovs/departments_department_name.sql
 @@application/shared_components/user_interface/lovs/desktop_theme_styles.sql
+@@application/shared_components/user_interface/lovs/employees_first_name.sql
+@@application/shared_components/user_interface/lovs/jobs_job_title.sql
 @@application/shared_components/user_interface/lovs/tipo_documento.sql
 @@application/shared_components/user_interface/lovs/user_theme_preference.sql
 @@application/pages/page_groups.sql
@@ -127,6 +130,7 @@ prompt --install
 @@application/pages/page_00010.sql
 @@application/pages/page_00011.sql
 @@application/pages/page_00013.sql
+@@application/pages/page_00020.sql
 @@application/pages/page_00026.sql
 @@application/pages/page_00027.sql
 @@application/pages/page_09999.sql
