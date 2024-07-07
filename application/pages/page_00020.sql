@@ -32,7 +32,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'17'
 ,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20240706173127'
+,p_last_upd_yyyymmddhh24miss=>'20240706175325'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(5227126059145418)
@@ -103,7 +103,7 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '// Defina a URL da API ORDS',
 '',
-'// var url = ''https://apex.oracle.com/pls/apex/apex_xepdb1/hr/employees/7698''; // Cloud',
+'// var url = ''https://apex.oracle.com/pls/apex/apex_xepdb1/hr/employees/''; // Cloud',
 'var url = ''http://localhost:8080/ords/apex_xepdb1/barbie/clientes'';',
 '',
 '// Chame a API usando fetch',
