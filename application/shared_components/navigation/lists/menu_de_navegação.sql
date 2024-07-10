@@ -63,7 +63,7 @@ wwv_flow_imp_shared.create_list_item(
 wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(5807554789393859)
 ,p_list_item_display_sequence=>6
-,p_list_item_link_text=>'API Restfull ORDS'
+,p_list_item_link_text=>'API Restful Correios'
 ,p_list_item_link_target=>'f?p=&APP_ID.:20:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-cloud-search'
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'

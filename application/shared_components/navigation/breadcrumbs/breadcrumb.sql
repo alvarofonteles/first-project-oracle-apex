@@ -73,8 +73,8 @@ wwv_flow_imp_shared.create_menu_option(
 );
 wwv_flow_imp_shared.create_menu_option(
  p_id=>wwv_flow_imp.id(5808414542393860)
-,p_short_name=>'API Restfull ORDS'
-,p_link=>'f?p=&APP_ID.:20:&APP_SESSION.::&DEBUG.:::'
+,p_short_name=>'API Restful Correios'
+,p_link=>'f?p=&APP_ID.:20:&SESSION.::&DEBUG.:::'
 ,p_page_id=>20
 );
 wwv_flow_imp_shared.create_menu_option(
