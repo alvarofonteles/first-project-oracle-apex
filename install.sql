@@ -131,6 +131,7 @@ prompt --install
 @@application/pages/page_00011.sql
 @@application/pages/page_00013.sql
 @@application/pages/page_00020.sql
+@@application/pages/page_00022.sql
 @@application/pages/page_00026.sql
 @@application/pages/page_00027.sql
 @@application/pages/page_09999.sql

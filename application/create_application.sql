@@ -50,7 +50,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'Projeto Barbie 2024'
 ,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20240710105903'
+,p_last_upd_yyyymmddhh24miss=>'20240711165811'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>24
 ,p_print_server_type=>'NATIVE'

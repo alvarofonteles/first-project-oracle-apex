@@ -32,7 +32,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'17'
 ,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20240710105646'
+,p_last_upd_yyyymmddhh24miss=>'20240710113914'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(5227126059145418)
@@ -115,6 +115,19 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_template_options=>'#DEFAULT#'
 ,p_button_template_id=>wwv_flow_imp.id(8067709486021724)
 ,p_button_image_alt=>'Get Correios 4 - PL/SQL'
+,p_warn_on_unsaved_changes=>null
+,p_grid_new_row=>'N'
+,p_grid_new_column=>'Y'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(6005884410475213)
+,p_button_sequence=>70
+,p_button_plug_id=>wwv_flow_imp.id(5227126059145418)
+,p_button_name=>'GET_CORREIOS_5'
+,p_button_action=>'DEFINED_BY_DA'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>wwv_flow_imp.id(8067709486021724)
+,p_button_image_alt=>'Get Correios 5 - PL/SQL'
 ,p_warn_on_unsaved_changes=>null
 ,p_grid_new_row=>'N'
 ,p_grid_new_column=>'Y'
@@ -342,6 +355,46 @@ unistr('    -- Atualizar o offset para a pr\00F3xima leitura'),
 '  ',
 '  -- Exibir ou fazer algo com os dados lidos',
 '  DBMS_OUTPUT.put_line(''Dados lidos: '' || l_buffer);',
+'END;'))
+,p_attribute_05=>'PLSQL'
+,p_wait_for_result=>'Y'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(6005908105475214)
+,p_name=>'Novo_3'
+,p_event_sequence=>60
+,p_triggering_element_type=>'BUTTON'
+,p_triggering_button_id=>wwv_flow_imp.id(6005884410475213)
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'click'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(6006035529475215)
+,p_event_id=>wwv_flow_imp.id(6005908105475214)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'    l_response CLOB;',
+'BEGIN',
+unistr('    -- Fazendo a chamada \00E0 API ViaCEP'),
+'    /*l_response := apex_web_service.make_rest_request(',
+'                     p_url => ''https://viacep.com.br/ws/60150150/json/'',',
+'                     p_http_method => ''GET'');',
+'',
+'    -- Armazenando a resposta no campo P1_JSON_RESPONSE',
+'    :P1_JSON_RESPONSE := l_response;*/',
+'',
+'    select  apex_web_service.make_rest_request(',
+'                               p_url => ''https://viacep.com.br/ws/''||60150150||''/json/'',',
+'                               p_http_method => ''GET'')',
+'    into l_response',
+'    from dual;',
+'    ',
+'    :P1_JSON_RESPONSE := l_response;',
 'END;'))
 ,p_attribute_05=>'PLSQL'
 ,p_wait_for_result=>'Y'
