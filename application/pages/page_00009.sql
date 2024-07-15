@@ -22,7 +22,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'18'
 ,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20240705190017'
+,p_last_upd_yyyymmddhh24miss=>'20240715091901'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(4691847155634571)
@@ -73,12 +73,10 @@ wwv_flow_imp_page.create_worksheet(
 ,p_pagination_display_pos=>'BOTTOM_RIGHT'
 ,p_report_list_mode=>'TABS'
 ,p_lazy_loading=>false
-,p_show_detail_link=>'C'
+,p_show_detail_link=>'N'
 ,p_show_notify=>'Y'
 ,p_download_formats=>'CSV:HTML:XLSX:PDF'
 ,p_enable_mail_download=>'Y'
-,p_detail_link=>'f?p=&APP_ID.:10:&APP_SESSION.::&DEBUG.:RP:P10_CLI_ID:\#CLI_ID#\'
-,p_detail_link_text=>'<span role="img" aria-label="Editar"><span class="fa fa-edit" aria-hidden="true" title="Editar"></span></span>'
 ,p_owner=>'ADMIN'
 ,p_internal_uid=>4691931186634571
 );

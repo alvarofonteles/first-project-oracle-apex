@@ -17,6 +17,59 @@ wwv_flow_imp_page.create_page(
 ,p_alias=>'MANUTENCAO-DE-CLIENTES'
 ,p_page_mode=>'MODAL'
 ,p_step_title=>unistr('Manuten\00E7\00E3o de Clientes')
+,p_welcome_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'<script type="text/javascript">',
+'',
+'function mascara(o,f){',
+'    v_obj=o',
+'    v_fun=f',
+'    setTimeout("execmascara()",1)',
+'}',
+'function execmascara(){',
+'    v_obj.value=v_fun(v_obj.value)',
+'}',
+'function mtel(v){',
+'    v=v.replace(/\D/g,"");',
+'    v=v.replace(/^(\d{2})(\d)/g,"($1) $2");',
+'    v=v.replace(/(\d)(\d{4})$/,"$1-$2");',
+'    return v;',
+'}',
+'function cpfcnpj(v){',
+'    if (v.length <= 14) {',
+'        v=v.replace(/\D/g,"")',
+'        v=v.replace(/(\d{3})(\d)/,"$1.$2")',
+'        v=v.replace(/(\d{3})(\d)/,"$1.$2")',
+'        v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2")',
+'   } else {',
+'        v=v.replace(/\D/g,"")',
+'        v=v.replace(/^(\d{2})(\d)/,"$1.$2")',
+'        v=v.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3")',
+'        v=v.replace(/\.(\d{3})(\d)/,".$1/$2")',
+'        v=v.replace(/(\d{4})(\d)/,"$1-$2")',
+'    }',
+'    return v;',
+'}',
+'function cep(v){',
+'    v=v.replace(/\D/g,"")',
+'    v=v.replace(/^(\d{5})(\d)/,"$1-$2")',
+'    return v',
+'}',
+'function id( el ){',
+'    return document.getElementById( el );',
+'}',
+'window.onload = function(){',
+'    id(''P11_DOCUMENTO'').onkeypress = function(){',
+'        mascara( this, cpfcnpj );',
+'    }',
+'    id(''P11_TELEFONE'').onkeypress = function(){',
+'        mascara( this, mtel );',
+'    }',
+'    id(''P11_CEP'').onkeypress = function(){',
+'        mascara( this, cep );',
+'    }',
+'}',
+'',
+'</script>'))
 ,p_autocomplete_on_off=>'OFF'
 ,p_step_template=>wwv_flow_imp.id(7892028016021601)
 ,p_page_template_options=>'#DEFAULT#:js-dialog-class-t-Drawer--pullOutEnd'
@@ -24,7 +77,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20240706065301'
+,p_last_upd_yyyymmddhh24miss=>'20240715093310'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(4522090338305915)
@@ -52,7 +105,7 @@ wwv_flow_imp_page.create_page_plug(
 );
 wwv_flow_imp_page.create_page_button(
  p_id=>wwv_flow_imp.id(5225650347145403)
-,p_button_sequence=>260
+,p_button_sequence=>290
 ,p_button_plug_id=>wwv_flow_imp.id(4572094679754492)
 ,p_button_name=>'BTN_SOMAR'
 ,p_button_action=>'DEFINED_BY_DA'
@@ -229,7 +282,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_display_as=>'NATIVE_TEXT_FIELD'
 ,p_cSize=>32
 ,p_cMaxlength=>20
-,p_tag_css_classes=>'mascara-cpf'
 ,p_begin_on_new_line=>'N'
 ,p_field_template=>wwv_flow_imp.id(8065176732021721)
 ,p_item_template_options=>'#DEFAULT#'
@@ -378,7 +430,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(4763414452078623)
 ,p_name=>'P11_DESENHO_FAVORITO'
 ,p_source_data_type=>'BLOB'
-,p_item_sequence=>210
+,p_item_sequence=>240
 ,p_item_plug_id=>wwv_flow_imp.id(4572094679754492)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4572094679754492)
 ,p_prompt=>'Escolha sua imagem'
@@ -442,7 +494,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(4763731534078626)
 ,p_name=>'P11_TIPO_FILME'
 ,p_source_data_type=>'VARCHAR2'
-,p_item_sequence=>220
+,p_item_sequence=>250
 ,p_item_plug_id=>wwv_flow_imp.id(4572094679754492)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4572094679754492)
 ,p_prompt=>'Tipo de Filme Favorito'
@@ -513,7 +565,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_name=>'P11_IMAGEM'
 ,p_source_data_type=>'BLOB'
 ,p_is_query_only=>true
-,p_item_sequence=>280
+,p_item_sequence=>300
 ,p_item_plug_id=>wwv_flow_imp.id(4572094679754492)
 ,p_item_source_plug_id=>wwv_flow_imp.id(4572094679754492)
 ,p_source=>'DESENHO_FAVORITO'
@@ -567,7 +619,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(4766171329078650)
 ,p_name=>'P11_NUM_1'
-,p_item_sequence=>230
+,p_item_sequence=>260
 ,p_item_plug_id=>wwv_flow_imp.id(4572094679754492)
 ,p_prompt=>unistr('N\00FAmero 1')
 ,p_display_as=>'NATIVE_TEXT_FIELD'
@@ -584,7 +636,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(5225422382145401)
 ,p_name=>'P11_NUM_2'
-,p_item_sequence=>240
+,p_item_sequence=>270
 ,p_item_plug_id=>wwv_flow_imp.id(4572094679754492)
 ,p_prompt=>unistr('N\00FAmero 2')
 ,p_display_as=>'NATIVE_TEXT_FIELD'
@@ -601,7 +653,7 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(5225526159145402)
 ,p_name=>'P11_RESULT'
-,p_item_sequence=>250
+,p_item_sequence=>280
 ,p_item_plug_id=>wwv_flow_imp.id(4572094679754492)
 ,p_prompt=>'Resultado'
 ,p_display_as=>'NATIVE_DISPLAY_ONLY'
@@ -613,6 +665,49 @@ wwv_flow_imp_page.create_page_item(
 ,p_attribute_02=>'VALUE'
 ,p_attribute_04=>'Y'
 ,p_attribute_05=>'PLAIN'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(6767812237807901)
+,p_name=>'P11_TELEFONE'
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>210
+,p_item_plug_id=>wwv_flow_imp.id(4572094679754492)
+,p_item_source_plug_id=>wwv_flow_imp.id(4572094679754492)
+,p_prompt=>'Telefone'
+,p_source=>'TELEFONE'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_cMaxlength=>20
+,p_field_template=>wwv_flow_imp.id(8065176732021721)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(6767993388807902)
+,p_name=>'P11_CEP'
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>220
+,p_item_plug_id=>wwv_flow_imp.id(4572094679754492)
+,p_item_source_plug_id=>wwv_flow_imp.id(4572094679754492)
+,p_prompt=>'Cep'
+,p_source=>'CEP'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_cMaxlength=>9
+,p_begin_on_new_line=>'N'
+,p_field_template=>wwv_flow_imp.id(8065176732021721)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
 );
 wwv_flow_imp_page.create_page_computation(
  p_id=>wwv_flow_imp.id(5225953013145406)

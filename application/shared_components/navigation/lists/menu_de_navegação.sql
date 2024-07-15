@@ -106,6 +106,15 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_for_pages=>'22'
 );
 wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(6784613893168203)
+,p_list_item_display_sequence=>29
+,p_list_item_link_text=>'CARG_DADOS_CLIENTE'
+,p_list_item_link_target=>'f?p=&APP_ID.:3:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-database-arrow-up'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'3'
+);
+wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(8195032866021935)
 ,p_list_item_display_sequence=>10000
 ,p_list_item_link_text=>unistr('Administra\00E7\00E3o')

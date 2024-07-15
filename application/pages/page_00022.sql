@@ -22,7 +22,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'21'
 ,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20240711165811'
+,p_last_upd_yyyymmddhh24miss=>'20240711202535'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(6027778122068000)
@@ -478,12 +478,11 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_sequence=>20
 ,p_button_plug_id=>wwv_flow_imp.id(6028345254068003)
 ,p_button_name=>'P22_GET_API'
-,p_button_action=>'DEFINED_BY_DA'
+,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#'
 ,p_button_template_id=>wwv_flow_imp.id(8067709486021724)
 ,p_button_is_hot=>'Y'
 ,p_button_image_alt=>'Chamar API'
-,p_warn_on_unsaved_changes=>null
 ,p_grid_new_row=>'Y'
 );
 wwv_flow_imp_page.create_page_item(
@@ -492,8 +491,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>10
 ,p_item_plug_id=>wwv_flow_imp.id(6028345254068003)
 ,p_prompt=>'Digite seu CEP'
-,p_source=>'P22_CEP'
-,p_source_type=>'ITEM'
 ,p_display_as=>'NATIVE_TEXT_FIELD'
 ,p_cSize=>30
 ,p_colspan=>2
@@ -559,7 +556,7 @@ wwv_flow_imp_page.create_page_da_action(
 unistr('    l_url VARCHAR2(200); -- Declare uma vari\00E1vel para a URL'),
 '    l_cep number;',
 'BEGIN',
-'    l_cep := 60870576; --:P22_CEP;',
+'    l_cep := :P22_CEP;',
 '',
 '    -- Construa a URL com base no valor de :P22_CEP',
 '    l_url := ''https://viacep.com.br/ws/'' || l_cep || ''/json/'';',

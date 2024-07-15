@@ -22,7 +22,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'18'
 ,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20240703170831'
+,p_last_upd_yyyymmddhh24miss=>'20240715093544'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(8200870141215007)
@@ -264,6 +264,36 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_label=>'Cor Favorita'
 ,p_column_type=>'STRING'
 ,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6768085874807903)
+,p_db_column_name=>'NOME_LIVRO'
+,p_display_order=>190
+,p_column_identifier=>'R'
+,p_column_label=>'Nome Livro'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6768163111807904)
+,p_db_column_name=>'TELEFONE'
+,p_display_order=>200
+,p_column_identifier=>'S'
+,p_column_label=>'Telefone'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(6768209183807905)
+,p_db_column_name=>'CEP'
+,p_display_order=>210
+,p_column_identifier=>'T'
+,p_column_label=>'Cep'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(

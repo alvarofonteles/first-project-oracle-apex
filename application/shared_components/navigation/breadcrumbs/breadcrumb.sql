@@ -84,6 +84,12 @@ wwv_flow_imp_shared.create_menu_option(
 ,p_page_id=>22
 );
 wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(6785532920168207)
+,p_short_name=>'CARG_DADOS_CLIENTE'
+,p_link=>'f?p=&APP_ID.:3:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>3
+);
+wwv_flow_imp_shared.create_menu_option(
  p_id=>wwv_flow_imp.id(4571804791754489)
 ,p_parent_id=>wwv_flow_imp.id(8201288693215009)
 ,p_option_sequence=>11

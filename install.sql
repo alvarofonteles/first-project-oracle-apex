@@ -120,10 +120,12 @@ prompt --install
 @@application/shared_components/plugins/template_component/theme_42_content_row.sql
 @@application/shared_components/plugins/template_component/theme_42_media_list.sql
 @@application/shared_components/plugins/template_component/theme_42_timeline.sql
+@@application/shared_components/data_loads/carga_de_dados_cliente.sql
 @@application/user_interfaces/combined_files.sql
 @@application/pages/page_00000.sql
 @@application/pages/page_00001.sql
 @@application/pages/page_00002.sql
+@@application/pages/page_00003.sql
 @@application/pages/page_00006.sql
 @@application/pages/page_00008.sql
 @@application/pages/page_00009.sql
