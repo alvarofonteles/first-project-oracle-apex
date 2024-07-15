@@ -1,0 +1,236 @@
+prompt --application/shared_components/data_loads/carga_de_dados_cliente
+begin
+--   Manifest
+--     DATA LOAD: Carga de Dados Cliente
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2023.04.28'
+,p_release=>'23.1.0'
+,p_default_workspace_id=>1403883904874300
+,p_default_application_id=>105
+,p_default_id_offset=>4464959646306689
+,p_default_owner=>'HR'
+);
+wwv_flow_imp_shared.create_data_profile(
+ p_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'Carga de Dados Cliente'
+,p_format=>'CSV'
+,p_encoding=>'iso-8859-1'
+,p_csv_enclosed=>'"'
+,p_has_header_row=>true
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6778918361162640)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'NOME'
+,p_sequence=>1
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>100
+,p_selector_type=>'NAME'
+,p_selector=>'NOME'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6779296285162640)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'SOBRENOME'
+,p_sequence=>2
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>100
+,p_selector_type=>'NAME'
+,p_selector=>'SOBRENOME'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6779561907162640)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'APELIDO'
+,p_sequence=>3
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>100
+,p_selector_type=>'NAME'
+,p_selector=>'APELIDO'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6779845461162640)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'DOCUMENTO'
+,p_sequence=>4
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>20
+,p_selector_type=>'NAME'
+,p_selector=>'DOCUMENTO'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6780172951162642)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'ENDERECO'
+,p_sequence=>5
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>100
+,p_selector_type=>'NAME'
+,p_selector=>'ENDERECO'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6780401584162642)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'DATA_CRIACAO'
+,p_sequence=>6
+,p_column_type=>'DATA'
+,p_data_type=>'DATE'
+,p_format_mask=>'DD"/"MM"/"RRRR'
+,p_has_time_zone=>false
+,p_selector_type=>'NAME'
+,p_selector=>'DATA_CRIACAO'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6780717875162642)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'DT_NASCIMENTO'
+,p_sequence=>7
+,p_column_type=>'DATA'
+,p_data_type=>'DATE'
+,p_format_mask=>'DD"/"MM"/"RRRR'
+,p_has_time_zone=>false
+,p_selector_type=>'NAME'
+,p_selector=>'DT_NASCIMENTO'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6781081707162642)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'TP_DOCUMENTO'
+,p_sequence=>8
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>5
+,p_selector_type=>'NAME'
+,p_selector=>'TP_DOCUMENTO'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6781326178162642)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'TP_SANGUINEO'
+,p_sequence=>9
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>5
+,p_selector_type=>'NAME'
+,p_selector=>'TP_SANGUINEO'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6781671652162642)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'TIME_FAVORITO'
+,p_sequence=>10
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>5
+,p_selector_type=>'NAME'
+,p_selector=>'TIME_FAVORITO'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6781968669162642)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'ATIVIDADES'
+,p_sequence=>11
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>100
+,p_selector_type=>'NAME'
+,p_selector=>'ATIVIDADES'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6782209941162643)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'TENHO_PET'
+,p_sequence=>12
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>5
+,p_selector_type=>'NAME'
+,p_selector=>'TENHO_PET'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6782579335162643)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'PET_LOVER'
+,p_sequence=>13
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>5
+,p_selector_type=>'NAME'
+,p_selector=>'PET_LOVER'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6782884960162643)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'TIPO_FILME'
+,p_sequence=>14
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>100
+,p_selector_type=>'NAME'
+,p_selector=>'TIPO_FILME'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6783162973162643)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'COR_FAVORITA'
+,p_sequence=>15
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>10
+,p_selector_type=>'NAME'
+,p_selector=>'COR_FAVORITA'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6783458247162643)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'NOME_LIVRO'
+,p_sequence=>16
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>200
+,p_selector_type=>'NAME'
+,p_selector=>'NOME_LIVRO'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6783778842162643)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'TELEFONE'
+,p_sequence=>17
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>20
+,p_selector_type=>'NAME'
+,p_selector=>'TELEFONE'
+);
+wwv_flow_imp_shared.create_data_profile_col(
+ p_id=>wwv_flow_imp.id(6784058894162643)
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_name=>'CEP'
+,p_sequence=>18
+,p_column_type=>'DATA'
+,p_data_type=>'VARCHAR2'
+,p_max_length=>9
+,p_selector_type=>'NAME'
+,p_selector=>'CEP'
+);
+wwv_flow_imp_shared.create_load_table(
+ p_id=>wwv_flow_imp.id(6784273563162643)
+,p_name=>'Carga de Dados Cliente'
+,p_static_id=>'carga_de_dados_cliente'
+,p_target_type=>'TABLE'
+,p_table_name=>'CLIENTE'
+,p_data_profile_id=>wwv_flow_imp.id(6778622497162610)
+,p_loading_method=>'APPEND'
+,p_commit_interval=>200
+,p_error_handling=>'ABORT'
+,p_skip_validation=>'N'
+);
+wwv_flow_imp.component_end;
+end;
+/
